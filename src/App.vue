@@ -19,7 +19,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>-->
-    <transition mode="out-to">
+    <transition>
       <router-view></router-view>
     </transition>
   </div>
@@ -52,11 +52,13 @@
     transition:all 0.5s ease;
   }
   .my-container{
-    padding-top: 24px;
+    padding-top: 25px;
+    padding-bottom: 65px;
     overflow-x:hidden;
   }
   .el-page-header{
     position:fixed;
+    top: 0px;
     background-color: green;
     width: 100%;
   }

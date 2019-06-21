@@ -1,15 +1,14 @@
 <template>
        <div>
-              <h1>Home</h1>
               <el-carousel :interval="4000" type="card" height="200px">
-                     <el-carousel-item v-for="item in 6" :key="item">
-                            <h3 class="medium">{{ item }}</h3>
+                     <el-carousel-item v-for="(item,index) in images" :key="index">
+                            <img class="medium" :src="item.img" alt="133" height="100%" width="100%" />
                      </el-carousel-item>
               </el-carousel>
               <table class="table">
                      <tbody>
                      <tr>
-                            <td><div class="icon-person"></div><span>Tanmay</span></td>
+                            <td><router-link to="/home/newslist"><div class="icon-person"></div><span>Tanmay</span></router-link></td>
                             <td>Bangalore</td>
                             <td>Bangalore</td>
                      </tr>
@@ -40,6 +39,7 @@
                                      console.log(res.data)
                                      this.images=res.data
                                      console.log(this.images)
+                                     this.images=res.data.message
                               })
                               .catch(function (err) {
                                      console.log("请求失败")
@@ -51,6 +51,7 @@
            created() {
                this.getCarousel()
            }
+
     }
 </script>
 

@@ -5,6 +5,8 @@ import HomeContainer from '@/components/HomeContainer.vue'
 import MemberContainer from '@/components/MemberContainer.vue'
 import SearchContainer from './components/SearchContainer.vue'
 import ShopcarContainer from './components/ShopcarContainer.vue'
+import NewsList from './components/news/NewsList'
+import NewsInfo from './components/news/NewsInfo.vue'
 
 Vue.use(Router)
 
@@ -29,6 +31,14 @@ export default new Router({
     {
       path:'/search',
       component:SearchContainer
+    },
+    {
+      path:'/home/newslist',
+      component:NewsList
+    },
+    {
+      path:'/home/newsinfo/:id',
+      component:NewsInfo
     }
     /*{
       path: '/about',

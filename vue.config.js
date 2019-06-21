@@ -9,7 +9,7 @@ module.exports = {
         proxy: {
             '/api': {
                // target: 'http://127.0.0.1:8088/', //对应自己的接口
-                target:'http://vue.studyit.io/',
+                target:'http://www.liulongbin.top:3005',
                 changeOrigin: true,
                 ws: true,
                 pathRewrite: {
