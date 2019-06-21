@@ -44,7 +44,7 @@
     transform:translateX(100%);
   }
   .v-leave-to{
-    opacity: 0;
+    opacity:0;
     transform: translateX(-100%);
     position:absolute;/*离开的动画绝对定位，为进来的动画腾出空间*/
   }
