@@ -8,7 +8,7 @@
           <ul class="nav navbar-nav">
             <li><router-link to="/home">首页 <span class="sr-only">(current)</span></router-link></li>
             <li><router-link to="/member"><div class="icon-person" style="text-align: center"></div><span>会员</span></router-link></li>
-            <li><router-link to="/shopcar">购物车</router-link></li>
+            <li><router-link to="/shopcar" id="badge">购物车</router-link></li>
             <li><router-link to="/search">搜索</router-link></li>
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -20,7 +20,7 @@
     </div>
     <router-view/>-->
     <transition>
-      <router-view></router-view>
+      <router-view key="key"></router-view>
     </transition>
   </div>
 </template>
@@ -39,6 +39,7 @@
 </script>
 
 <style lang="scss">
+
   .v-enter{
     opacity:0;
     transform:translateX(100%);
